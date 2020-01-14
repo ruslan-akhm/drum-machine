@@ -1,0 +1,132 @@
+body{
+  margin:0;
+  background-color:#42587a;
+}
+.parent{
+  height:100vh;
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center; 
+}
+#drum-machine{
+  display:flex;
+  flex-wrap: nowrap;
+  border: solid 4px #1b2342;
+  border-radius: 5px;
+  width:auto;
+  min-height:300px;
+  height:auto;
+  max-height:700px;
+  background-color:#2b384d;
+}
+#drum-pad-parent{
+  display:grid;
+  grid-template-columns: [col1] 33% [col2] 33% [col3] 33%;
+  grid-template-rows: [row1] 33% [row2] 33% [row3] 33%;
+  background-color:#2b384d;
+  width:300px;
+  height:auto;
+  border-radius:2px;
+}
+.display-parent{
+  background-color:#7488a8;
+  width:200px;
+  height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
+  flex-direction:column;
+}
+#display{
+  border: solid 3px black;
+  width:140px;
+  height:30px;
+  background-color:#121212;
+  font-family: 'Orbitron', sans-serif;
+  font-size:18px;
+  text-align:center;
+  color:red;
+  padding-top:5px;
+}
+.power-button{
+  width:100px;
+  height:30px;
+  font-family: 'Lexend Exa', sans-serif;
+  font-size:16px;
+  font-weight:bold;
+}
+#power{/*These Ids required in order to pass the tests*/
+}
+#Q{
+}
+#W{
+}
+#E{
+}
+#A{
+}
+#S{
+}
+#D{
+}
+#Z{
+}
+#X{
+}
+#C{
+}
+
+.drum-pad{
+  border:solid 2px black;
+  margin: 5px 5px 5px 5px;
+  border-radius:5px;
+  text-align:center;
+  background-color: #7488a8;
+  font-family: 'Lexend Exa', sans-serif;
+  font-size:24px;
+  outline:0;
+  cursor:pointer;
+}
+button:active{
+  border:solid 2px black;
+  margin: 5px 5px 5px 5px;
+  border-radius:5px;
+  text-align:center;
+  background-color: white;
+  font-family: 'Lexend Exa', sans-serif;
+  font-size:24px;
+  outline:0;
+}
+button:disabled {
+  background-color:#5c5b59;
+  color:black;
+}
+.check{
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid black;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+.check:checked{
+    background-color: red;
+}
+@media (max-width:500px){
+  #drum-machine{
+    justify-content:middle;
+    flex-direction:column;
+  }
+  #drum-pad-parent{
+  width:250px;
+  height:250px;
+}
+  .display-parent{
+  width:auto;
+  height:150px;
+}
+}
